@@ -11,28 +11,7 @@ public class Album {
         album = new Cromo[864]; // Inicialitza l'array amb 864 elements
     }
 
-    public Cromo getCromo(int index) {
-        if (index < 0 || index >= 864) {
-            throw new IndexOutOfBoundsException("Index fora de rang: " + index);
-        }
-        return album[index];
-    }
 
-    public void setCromo(int index, Cromo cromo) {
-        if (index < 0 || index >= 864) {
-            throw new IndexOutOfBoundsException("Index fora de rang: " + index);
-        }
-        album[index] = cromo;
-    }
-
-    public boolean isFull() {
-        for (Cromo cromo : album) {
-            if (cromo == null) {
-                return false;
-            }
-        }
-        return true;
-    }
     private boolean aferrarCromo(Cromo cromo) {
         int posicio = cromo.getNumero() - 1; // Calculate the position
         if (album[posicio] == null) {
@@ -62,19 +41,20 @@ public class Album {
     }
 
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
-        Paquet P1 = new Paquet();
-        System.out.println(P1.getCromos().size());
+        Paquet P1 = new Paquet();   // Cream paquet
+        System.out.println(P1.getCromos().size());   // Mostram el nombre de cromos del paquet
         Album A1 = new Album();
         Album A2 = new Album();
         A1.aferrarPaquet(P1);
 
-        System.out.println(P1.getCromos().size());
+        System.out.println(P1.getCromos().size());    // Mostrame el nombre de cromos del paquet
+
         A2.aferrarPaquet(P1);
-        System.out.println("cromos aferrats:");
-        System.out.println(A1.getCromosAferrats());
-        System.out.println(A2.getCromosAferrats());
+        System.out.println("Cromos aferrats:");
+        System.out.println("Album1:" + A1.getCromosAferrats());
+        System.out.println("Album2:" + A2.getCromosAferrats());
 
 
 
