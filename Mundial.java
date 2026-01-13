@@ -2,7 +2,7 @@ public class Mundial {
 
 private static    String[] paisosClassificats = {
             "USA","CAN","MEX","JPN","IRN","KOR","AUS","JOR","QAT","KSA","UZB","ALG","CPV","EGY","GHA","CIV","MAR","SEN","RSA","TUN","ENG","NZL","ARG","BRA","COL","ECU","PAR","URU"
-    };
+        ,"","","","","","","","","","","","","","","","" ,"" ,"" ,""  ,""    };
 
 
     public static boolean participaAlMundial2026(String codiPais) {
