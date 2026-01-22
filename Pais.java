@@ -15,7 +15,7 @@ public class Pais {
     public Pais(String codi) {
         this.codi = codi;
         this.nom = codi; // Valor per defecte per a nom
-        this.grup = ' '; // Valor per defecte per a grup
+        this.grup = 'X'; // Valor per defecte per a grup
     }
     public String getCodi() {
         return codi;
