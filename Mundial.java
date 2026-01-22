@@ -1,14 +1,23 @@
 public class Mundial {
 
-private static    String[] paisosClassificats = {
-            "USA","CAN","MEX","JPN","IRN","KOR","AUS","JOR","QAT","KSA","UZB","ALG","CPV","EGY","GHA","CIV","MAR","SEN","RSA","TUN","ENG","NZL","ARG","BRA","COL","ECU","PAR","URU"
-        ,"","","","","","","","","","","","","","","","" ,"" ,"" ,""  ,""    };
+private static    Pais[] paisosClassificats = {
+        new Pais("USA"), new Pais("CAN"), new Pais("MEX"), new Pais("JPN"),
+        new Pais("IRN"), new Pais("KOR"), new Pais("AUS"), new Pais("JOR"),
+        new Pais("QAT"), new Pais("KSA"), new Pais("UZB"), new Pais("ALG"),
+        new Pais("CPV"), new Pais("EGY"), new Pais("GHA"), new Pais("CIV"),
+        new Pais("MAR"), new Pais("SEN"), new Pais("RSA"), new Pais("TUN"),
+        new Pais("ENG"), new Pais("NZL"), new Pais("ARG"), new Pais("BRA"),
+        new Pais("COL"), new Pais("ECU"), new Pais("PAR"), new Pais("URU"),
+        null, null, null, null, null, null, null, null, null, null,
+        null, null, null, null, null, null,
+        null, null, null, null
+};
 
 
     public static boolean participaAlMundial2026(String codiPais) {
 
-        for (String pais : paisosClassificats) {
-            if (pais.equalsIgnoreCase(codiPais)) {
+        for (Pais pais : paisosClassificats) {
+            if (pais.getCodi().equalsIgnoreCase(codiPais)) {
                 return true;
             }
         }
@@ -20,9 +29,11 @@ private static    String[] paisosClassificats = {
         return (short) paisosClassificats.length;
     }
 
-    public static String getPais (short pais) {
+    public static Pais getPais (short pais) {
         // Donat un index de pais retorna la codificació
         return paisosClassificats[pais];
     }
+
+
 
 }

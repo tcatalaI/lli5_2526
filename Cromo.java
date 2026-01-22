@@ -3,7 +3,7 @@ import java.time.LocalDate;
 public class Cromo {
     private  short numero;
     private static int cromosNoMundial = 0;
-    private final String pais;
+    private final Pais pais;
     private  int anyIncorporacio;
     private  double alcada; // in meters
     private  double pes; // in kilograms
@@ -18,7 +18,7 @@ public class Cromo {
 
 
     // Constructor
-    public Cromo(String pais, int anyIncorporacio, double alcada, double pes, String posicio, String nom, LocalDate dataNaixement) {
+    public Cromo(Pais pais, int anyIncorporacio, double alcada, double pes, String posicio, String nom, LocalDate dataNaixement) {
 
         this.anyIncorporacio = anyIncorporacio;
         this.alcada = alcada;
@@ -30,7 +30,7 @@ public class Cromo {
         this.numero = 0;
     }
 
-    public Cromo(short numero, String pais) {
+    public Cromo(short numero, Pais pais) {
 
         this.numero = numero;
         this.pais = pais;
@@ -38,7 +38,7 @@ public class Cromo {
 
         // Getters
 
-    public String getPais() {
+    public Pais getPais() {
         return pais;
     }
 

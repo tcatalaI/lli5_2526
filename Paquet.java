@@ -23,7 +23,7 @@ public class Paquet {
 
 
 
-    private String pais(short numero) {
+    private Pais pais(short numero) {
      // Donat un nombre de cromo, ens retorna el pais corresponent
         byte index = (byte) (numero / 18);
         if (index > Mundial.nombrePaisosClassificats() - 1)
